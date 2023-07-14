@@ -2,7 +2,6 @@ import argparse
 import nibabel as nib
 import numpy as np
 from dipy.io import read_bvals_bvecs
-import os
 
 # argparse arguments
 parser = argparse.ArgumentParser(description='For Pulling those b0s')
