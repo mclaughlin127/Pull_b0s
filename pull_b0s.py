@@ -31,7 +31,7 @@ bval,bvec = read_bvals_bvecs(bval_path, bvec_path)
 img = nib.load(nii_path)
 nii = img.get_fdata()
 
-# identify + extract b0s and save synb0 output for each b0
+# identify + extract b0s
 b_count = 0 
 for i in range(len(bval)):
     if bval[i] == 0 or bval[i] == 1:
