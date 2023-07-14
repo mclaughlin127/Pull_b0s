@@ -2,7 +2,6 @@ import argparse
 import nibabel as nib
 import numpy as np
 from dipy.io import read_bvals_bvecs
-import subprocess
 import os
 
 # argparse arguments
