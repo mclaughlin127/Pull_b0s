@@ -6,19 +6,25 @@ import subprocess
 import os
 
 # argparse arguments
-parser = argparse.ArgumentParser(description='Eddymotion Implementation')
+parser = argparse.ArgumentParser(description='For Pulling those b0s')
 
-parser.add_argument("--input_dir", help="Flag for defining input directory")
+#parser.add_argument("--input_dir", help="Flag for defining input directory")
 parser.add_argument("--output_dir", help="Flag for defining output directory")
+parser.add_argument("--nii_path", help="Flag for defining NIFTI file path")
+parser.add_argument("--bval_path", help="Flag for defining BVAL file path")
+parser.add_argument("--bvec_path", help="Flag for defining BVEC file path")
 args = parser.parse_args()
 
-input_dir = args.input_dir
+#input_dir = args.input_dir
 output_dir = args.output_dir
+nii_path = args.nii_path
+bval_path = args.bval_path
+bvec_path = args.bvec_path
 
 # file paths
-bval_path = f'{input_dir}/dwi.bval'
-bvec_path = f'{input_dir}/dwi.bvec'
-nii_path = f'{input_dir}/dwi.nii.gz'
+#bval_path = f'{input_dir}/*.bval'
+#bvec_path = f'{input_dir}/*.bvec'
+#nii_path = f'{input_dir}/*.nii.gz'
 
 # import bval/bvecs/nifti files
 bval,bvec = read_bvals_bvecs(bval_path, bvec_path)
